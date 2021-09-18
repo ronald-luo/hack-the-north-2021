@@ -4,6 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// more dependencies
+const passportSetup = require('./config/setPassport');
+const mongoose = require('mongoose');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
+
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/authentication');
 
@@ -13,6 +19,16 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// setup cookie
+app.use(cookieSession({
+  maxAge: 24 * 60 * 60 * 1000,
+  keys: ['abcdefghijklmnopqrstuvwxyz']
+}))
+
+// initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -20,7 +36,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', authRouter);
+app.use('/', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -38,8 +54,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000, () => {
-  console.log('listening to port 3000')
+const dbURI = 'mongodb+srv://Ron:SwmlXmcZIQcONk4G@cluster0.t6i6m.mongodb.net/authentication?retryWrites=true&w=majority'
+mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
+.then(() => {
+  console.log('connected to mongoDB')
+  app.listen(3000, () => {
+    console.log('listening to 3000')
+  })
 })
 
 module.exports = app;

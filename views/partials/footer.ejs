@@ -4,4 +4,18 @@
 
 </footer>
 
+    <script src="https://releases.transloadit.com/uppy/v2.1.0/uppy.min.js"></script>
 </html>
+
+    <script>
+        var uppy = new Uppy.Core()
+        uppy.use(Uppy.Dashboard, { 
+            inline: true,
+            target: '#drag-drop-area'
+        })
+        uppy.use(Uppy.Webcam, { mirror: true, target: Uppy.Dashboard })
+        uppy.use(Uppy.XHRUpload, { endpoint: 'http://127.0.0.1:3000/upload', fieldName: 'photo' })
+        uppy.on('complete', res => {
+            console.log(res.successful)
+        })
+    </script>
