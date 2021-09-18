@@ -1,3 +1,4 @@
+require('dotenv').config()
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -54,7 +55,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const dbURI = 'mongodb+srv://Ron:SwmlXmcZIQcONk4G@cluster0.t6i6m.mongodb.net/authentication?retryWrites=true&w=majority'
+
+const dbURI = process.env.DBURI
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
   console.log('connected to mongoDB')

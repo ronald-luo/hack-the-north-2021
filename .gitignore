@@ -1,1 +1,4 @@
 node_modules/
+/config/prescription-326300-78c8fe92d82c.json
+.env
+/config/.env

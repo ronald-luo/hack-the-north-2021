@@ -25,3 +25,17 @@
 </section>
 
 <%- include('./partials/footer.ejs')  %> 
+
+<script>
+    const red = document.querySelector('button');
+
+    red.addEventListener('click', (e) => {
+        const endpoint = '/pass'
+        fetch(endpoint, {
+            method: 'post'
+        })
+        .then(response => response.json())
+        .then(data => window.location.href = data.redirect)
+        .catch(err => console.log(err))
+    })
+</script>
