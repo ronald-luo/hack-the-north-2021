@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Mulish:wght@400;800;900&display=swap');
+
+$padding0: 20px;
+$padding1: 32px;
+$padding2: 52px;
+
+$margin0: 20px;
+$margin1: 32px;
+$margin2: 52px;
+$margin3: 150px;
+
+
+html {
+    box-sizing: border-box; 
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 52px;
+}
+
+h2 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 38px;
+}
+
+
+h3 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+h5 {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+body {
+    background-color: white;
+}
+
+#logo {
+    height: 35px;
+    width: 129px;
+    background-color: black;
+    border-radius: 20px;
+    margin: $margin0;
+}
+
+#hero-section {
+    width: 100vw;
+    height: 502px;
+    display: grid;
+    text-align: center;
+    padding: $padding0;
+    align-items: center;
+
+    [type="text"] {
+        height: 44px;
+        border-radius: 10px;
+        border: 1px solid grey;
+        text-indent: 12px;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+    }
+
+    [type="submit"] {
+        height: 44px;
+        border-radius: 10px;
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 10px 15px 10px 15px;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+    }
+}
+
+section {
+    margin: 0 auto 0 auto;
+    height: 319px;
+    width: 331px;
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: $margin1;
+    }
+    margin-bottom: $margin3;
+
+    img {
+        max-height: 100%;
+        width: auto;
+    }
+}
+
+#card {
+    padding: $padding0;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+#landing-footer {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: $margin1;
+    }
+    
+    .start-btn {
+        height: 44px;
+        width: 115px;
+        background-color: black;
+        border-radius: 10px;
+    }
+}
+
+/* dashboard */
+
+header {
+    display: grid;
+    grid-template-columns: auto 44px;
+    align-items: center;
+    margin: $margin0;
+    margin-bottom: $margin2;
+}
+
+#profile-pic {
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 40%;
+}
+
+#main-dashboard {
+    margin: $margin0;
+
+    h2 {
+        font-weight: 400;
+    }
+
+    #search-btn {
+        position: absolute;
+        display: block;
+        transform: translateX(12px) translateY(42px);
+    }
+
+    [type="text"] {
+        height: 44px;
+        width: 100%;
+        background-color: lightblue;
+        border: none;
+        text-indent: 40px;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        border-radius: 15px;
+        margin: $margin1 0 $margin1 0;
+    }
+}
+
+.prescription-card {
+    display: grid;
+    grid-template-columns: auto 44px;
+    height: 44px;
+    background-color: lightcyan;
+    border-radius: 15px;
+    align-items: center;
+
+    h3 {
+        text-indent: $margin0;
+    }
+
+    .chevron {
+        background-color: white;
+        border-radius: 50%;
+        
+    }
+}
+
+/* form */
+
+#form-page {
+    width: 100vw;
+    height: 502px;
+    padding: $padding0;
+}
