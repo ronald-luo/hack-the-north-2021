@@ -18,7 +18,8 @@ passport.use(new GoogleStrategy({
     // strategy options
     callbackURL: '/auth/google/redirect',
     clientID: process.env.CLIENTID,
-    clientSecret: process.env.CLIENTSECRET
+    clientSecret: process.env.CLIENTSECRET,
+    // scope: ['https://www.googleapis.com/auth/calendar']
     }, (accessToken, refreshToken, profile, done) => {
         // check if user already exists
         User.findOne({googleId: profile.id}).then((currentUser) => {

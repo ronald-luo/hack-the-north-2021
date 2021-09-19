@@ -344,6 +344,10 @@ header {
 
 #dash-upload {
     margin-bottom: 400px;
+
+    h2 {
+        text-transform: lowercase;
+    }
 }
 
 .prescription-card {
@@ -373,8 +377,13 @@ header {
     }
 }
 
-/* form */
+#dash-history {
+    h2 {
+        text-transform: lowercase;
+    }
+}
 
+/* form */
 #form-page {
     width: 330px;
     margin: $margin0 auto $margin2 auto;
@@ -413,9 +422,14 @@ header {
  }
 
  footer {
+     display: grid;
+     justify-items: center;
+     grid-row-gap: $margin0;
      h5 {
          text-align: center;
          color: lighten(black, 32%);
-         transform: translateY(100px);
+
      }
+     margin: $margin0;
+
  }

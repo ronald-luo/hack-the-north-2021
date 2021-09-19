@@ -353,6 +353,10 @@ header #logout-btn:hover {
   margin-bottom: 400px;
 }
 
+#dash-upload h2 {
+  text-transform: lowercase;
+}
+
 .prescription-card {
   display: -ms-grid;
   display: grid;
@@ -383,6 +387,10 @@ header #logout-btn:hover {
   background-color: white;
   border-radius: 50%;
   cursor: pointer;
+}
+
+#dash-history h2 {
+  text-transform: lowercase;
 }
 
 /* form */
@@ -428,10 +436,16 @@ header #logout-btn:hover {
   }
 }
 
+footer {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 20px;
+  margin: 20px;
+}
+
 footer h5 {
   text-align: center;
   color: #525252;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
 }
 /*# sourceMappingURL=main.css.map */
