@@ -42,16 +42,58 @@ h5 {
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
+  color: #5c5c5c;
 }
 
 body {
   background-color: white;
 }
 
+.bg-color {
+  position: absolute;
+  left: 0;
+  height: 80vh;
+  width: 100vw;
+  z-index: -1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6ecfa), color-stop(#d5ddf1), color-stop(#c4cde8), color-stop(#b3bede), to(#a3afd5));
+  background-image: linear-gradient(to bottom, #e6ecfa, #d5ddf1, #c4cde8, #b3bede, #a3afd5);
+  opacity: 20%;
+}
+
+.hero-bg {
+  top: 0;
+}
+
+.sect-bg {
+  top: 290%;
+}
+
+.bg-whole {
+  top: 0;
+  height: 210vh;
+}
+
+.bg-form {
+  height: 140vh;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  form {
+    width: 460px;
+  }
+}
+
 #land-header {
   display: -ms-grid;
   display: grid;
-  margin: 20px;
+  margin: 20px auto 20px auto;
+}
+
+@media (min-width: 768px) {
+  #land-header {
+    width: 460px;
+  }
 }
 
 #logo {
@@ -60,6 +102,7 @@ body {
   background-color: black;
   border-radius: 20px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .google {
@@ -79,28 +122,60 @@ body {
   -ms-grid-column-align: end;
       justify-self: end;
   text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.google:hover {
+  background-color: #cf3624;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 #hero-section {
-  width: 100vw;
+  width: 330px;
   height: 502px;
   display: -ms-grid;
   display: grid;
   text-align: center;
-  padding: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  margin: 0 auto 0 auto;
+}
+
+@media (min-width: 768px) {
+  #hero-section {
+    width: 460px;
+    text-align: left;
+    justify-items: left;
+  }
+  #hero-section h5 {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  #hero-section #email-form {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+#hero-section #email-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.618fr 1fr;
+      grid-template-columns: 1.618fr 1fr;
+  grid-gap: 20px;
 }
 
 #hero-section [type="text"] {
   height: 44px;
   border-radius: 10px;
-  border: 1px solid grey;
+  border: none;
   text-indent: 12px;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
+  outline: none;
 }
 
 #hero-section [type="submit"] {
@@ -112,6 +187,7 @@ body {
   padding: 10px 15px 10px 15px;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
+  cursor: pointer;
 }
 
 section {
@@ -119,6 +195,12 @@ section {
   height: 319px;
   width: 331px;
   margin-bottom: 150px;
+}
+
+@media (min-width: 768px) {
+  section {
+    width: 460px;
+  }
 }
 
 section h2 {
@@ -129,12 +211,17 @@ section h2 {
 section img {
   max-height: 100%;
   width: auto;
+  display: block;
+  margin: 0 auto 0 auto;
 }
 
 #card {
   padding: 20px;
   border: 1px solid black;
   border-radius: 25px;
+  background-color: white;
+  -webkit-box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
 }
 
 #landing-footer {
@@ -147,9 +234,26 @@ section img {
   justify-items: center;
 }
 
+@media (min-width: 768px) {
+  #landing-footer {
+    width: 460px;
+  }
+}
+
 #landing-footer h2 {
   text-transform: uppercase;
   margin-bottom: 32px;
+}
+
+#landing-footer a {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+#landing-footer a div {
+  text-align: center;
+  padding-top: 12.5px;
 }
 
 #landing-footer .start-btn {
@@ -168,8 +272,26 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px;
-  margin-bottom: 52px;
+  width: 330px;
+  margin: 20px auto 52px auto;
+}
+
+@media (min-width: 768px) {
+  header {
+    width: 460px;
+  }
+}
+
+header #logout-btn {
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+}
+
+header #logout-btn:hover {
+  background-color: #f3e9e8;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 #profile-pic {
@@ -186,7 +308,14 @@ header {
 }
 
 #main-dashboard {
-  margin: 20px;
+  width: 330px;
+  margin: 0 auto 0 auto;
+}
+
+@media (min-width: 768px) {
+  #main-dashboard {
+    width: 460px;
+  }
 }
 
 #main-dashboard h2 {
@@ -198,18 +327,26 @@ header {
   display: block;
   -webkit-transform: translateX(12px) translateY(42px);
           transform: translateX(12px) translateY(42px);
+  cursor: pointer;
 }
 
 #main-dashboard [type="text"] {
   height: 44px;
   width: 100%;
-  background-color: lightblue;
+  background-color: white;
   border: none;
   text-indent: 40px;
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   border-radius: 15px;
   margin: 32px 0 32px 0;
+  outline: none;
+}
+
+#main-dashboard [type="text"]:hover {
+  background-color: #faf6f6;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 #dash-upload {
@@ -221,27 +358,80 @@ header {
   display: grid;
   -ms-grid-columns: auto 44px;
       grid-template-columns: auto 44px;
-  height: 44px;
-  background-color: lightblue;
+  height: 60px;
+  background-color: white;
   border-radius: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prescription-card:hover {
+  background-color: #faf6f6;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .prescription-card h5 {
   text-indent: 20px;
+  margin: 0;
 }
 
 .prescription-card .chevron {
   background-color: white;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 /* form */
 #form-page {
-  width: 100vw;
-  height: 502px;
-  padding: 20px;
+  width: 330px;
+  margin: 20px auto 52px auto;
+}
+
+@media (min-width: 768px) {
+  #form-page {
+    width: 460px;
+  }
+}
+
+.form-horizontal label {
+  margin: 12px 0 8px 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .form-horizontal label {
+    width: 460px;
+  }
+}
+
+.form-horizontal [type="text"] {
+  width: 330px;
+}
+
+@media (min-width: 768px) {
+  .form-horizontal [type="text"] {
+    width: 460px;
+  }
+}
+
+.form-horizontal textarea {
+  width: 330px;
+}
+
+@media (min-width: 768px) {
+  .form-horizontal textarea {
+    width: 460px;
+  }
+}
+
+footer h5 {
+  text-align: center;
+  color: #525252;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 /*# sourceMappingURL=main.css.map */

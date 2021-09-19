@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title  %> </title>
+    <title><%= title %> </title>
     <link rel="stylesheet" href="stylesheets/reset.css">
     <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 <body>
 
+<div class="hero-bg bg-color"></div>
 <header id="land-header">
     <div id="logo"></div>
     <a href="/auth/google" class="google btn">
@@ -20,7 +21,7 @@
 <main id="hero-section">
     <h1>STRESS FREE MEDICATION TRACKING</h1>
     <h5>It's that simple</h5>
-    <form action="">
+    <form id="email-form" action="/auth/google" method="GET">
         <input type="text" name="" id="email" placeholder="email address">
         <input type="submit" value="get access">
     </form>
@@ -41,6 +42,7 @@
     <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, dicta.</h5>
 </section>
 
+<div class="sect-bg bg-color"></div>
 <section>
     <h2>Utilize the power of habit</h2>
     <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, dicta.</h5>
@@ -48,5 +50,5 @@
 
 <section id="landing-footer">
     <h2>GET STARTED</h2>
-    <a href="/login"><div class="start-btn"></div></a>
+    <a href="/auth/google"><div class="start-btn">sign up</div></a>
 </section>

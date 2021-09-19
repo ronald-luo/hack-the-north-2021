@@ -1,7 +1,8 @@
 <%- include('./partials/header.ejs')  %> 
 
+<div class="bg-color bg-whole"></div>
 <main id="main-dashboard">
-    <h2>Good morning, <br> <%= user.name %> </h1>
+    <h2>Good morning, <br> <strong><%= user.name %></strong></h1>
 
     <form action="">
         <img src="https://s2.svgbox.net/octicons.svg?ic=search&color=000" width="24" height="24" id="search-btn">
@@ -25,17 +26,3 @@
 </section>
 
 <%- include('./partials/footer.ejs')  %> 
-
-<script>
-    const red = document.querySelector('button');
-
-    red.addEventListener('click', (e) => {
-        const endpoint = '/pass'
-        fetch(endpoint, {
-            method: 'post'
-        })
-        .then(response => response.json())
-        .then(data => window.location.href = data.redirect)
-        .catch(err => console.log(err))
-    })
-</script>
