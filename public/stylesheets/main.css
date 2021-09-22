@@ -97,12 +97,28 @@ body {
 }
 
 #logo {
-  height: 35px;
-  width: 129px;
-  background-color: black;
+  height: 44px;
+  width: 144px;
+  background-color: white;
   border-radius: 20px;
   display: inline-block;
   cursor: pointer;
+  padding: 5px;
+  display: -ms-grid;
+  display: grid;
+  border: 1px solid black;
+}
+
+#logo h2 {
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+#tagline {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .google {

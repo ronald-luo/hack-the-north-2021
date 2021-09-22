@@ -112,12 +112,26 @@ form {
 }
 
 #logo {
-    height: 35px;
-    width: 129px;
-    background-color: black;
+    height: 44px;
+    width: 144px;
+    background-color: white;
     border-radius: 20px;
     display: inline-block;
     cursor: pointer;
+    padding: 5px;
+    display: grid;
+    border: 1px solid black;
+    
+    h2 {
+        color: black;
+        font-size: 18px;
+        text-align: center;
+        transform: translateY(-2px);
+    }
+}
+
+#tagline {
+    color: rgba(0,0,0, 0.8);
 }
 
 .google {
