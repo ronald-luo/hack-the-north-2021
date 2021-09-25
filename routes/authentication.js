@@ -20,7 +20,6 @@ const makeEvent = async (rfToken) => {
   'DEF')
 
   oAuth2Client.setCredentials({refresh_token: rfToken })
-  // oAuth2Client.setCredentials({refresh_token:'1//04bLfANpxnmSMCgYIARAAGAQSNwF-L9Ir9wfI9kQedC2eW0cUAIlq7zeIUrLR12TMXb2_6dpfJtFAyjW1_Gg8mRqGhdqGJ8VM30o'})
 
 
   const calendar = google.calendar({version: 'v3', auth:oAuth2Client})
@@ -75,7 +74,7 @@ const makeEvent = async (rfToken) => {
 // }))
 
 router.post('/add-cal', function(req, res, next) {
-  makeEvent('1//04bLfANpxnmSMCgYIARAAGAQSNwF-L9Ir9wfI9kQedC2eW0cUAIlq7zeIUrLR12TMXb2_6dpfJtFAyjW1_Gg8mRqGhdqGJ8VM30o')
+  makeEvent('rftoken')
   res.json({redirect:'/dashboard'});
 });
 
