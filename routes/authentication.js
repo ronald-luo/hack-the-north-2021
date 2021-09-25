@@ -16,8 +16,8 @@ router.get('/auth/google', passport.authenticate('google', {
 const makeEvent = async (rfToken) => {
   const {google} = require('googleapis')
   const {OAuth2} = google.auth
-  const oAuth2Client = new OAuth2('870393662920-v1qb7f28dmj9cl9c79ob299ni1j1oquq.apps.googleusercontent.com',         //Client id and Client secret
-  'exCYS5hPlANw_XlqITxS9oPM')
+  const oAuth2Client = new OAuth2('ABC',         //Client id and Client secret
+  'DEF')
 
   oAuth2Client.setCredentials({refresh_token: rfToken })
   // oAuth2Client.setCredentials({refresh_token:'1//04bLfANpxnmSMCgYIARAAGAQSNwF-L9Ir9wfI9kQedC2eW0cUAIlq7zeIUrLR12TMXb2_6dpfJtFAyjW1_Gg8mRqGhdqGJ8VM30o'})
